@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html, body{
+    width: 1440px;
+    height: 800px;
+    background-color:hsl(257, 40%, 49%);
+    background-image: url(images/bg-desktop.svg);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+/*HEADER*/
+header{
+    width: 100%;
+}
+header img{
+    padding: 60px 80px;
+}
+/*END OF HEADER*/
+/*MAIN*/
+main{
+    width: 100%;
+    margin: 32px 80px;
+}
+section{
+    width: 50%;
+    float: left;
+}
+article{
+    width: 40%;
+    float: left;
+    margin-left: 50px;
+}
+article h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+article p{
+    font-size: 20px;
+    margin: 25px 0;
+}
+article button{
+    width: 200px;
+    height: 57px;
+    background-color: #fff;
+    color: hsl(257, 40%, 49%);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: none;
+    box-shadow: hsl(255, 27.8%, 42.4%) 3px 3px 3px 3.5px;}
+/*END OF MAIN*/
+/*FOOTER*/
+footer{
+    width: 100%;
+    clear: both;
+    padding-top: 25px;
+}
+/*SOCIALS*/
+.socials{
+    width: 300px;
+    float: right;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 7px;
+    position: relative;
+}
+li a{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+li a.fb{
+    left: 14px;
+}
+li i{
+    color: #fff;
+    font-size: 20px;
+}
+/*END OF SOCIALS*/
+/*AUTHORS*/
+footer p{
+    clear: both;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    background-color: rgba(255, 255, 255, 0.397);
+    border-radius: 25%;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    -ms-border-radius: 25%;
+    -o-border-radius: 25%;
+}
