@@ -15,94 +15,135 @@ html, body{
 header{
     width: 100%;
 }
-header img{
-    padding: 60px 80px;
+img.logo{
+    margin: 3.75em 5em;
 }
 /*END OF HEADER*/
 /*MAIN*/
-main{
+.main{
     width: 100%;
-    margin: 32px 80px;
+    margin: 0 5em;
+}
+.container{
+    width: 100%;
+    /* max-width: 1440px; */
+    max-width: 100%;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+.main .container{
+    width: 100%;
+    /* max-width: 1440px; */
+    max-width: 100%;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+.main .container::after{
+    content: "";
+    display: table;
+    clear: both;
 }
 section{
     width: 50%;
     float: left;
 }
+img.illustration {
+    width: 100%;
+    max-width: 100%;
+    }
 article{
-    width: 40%;
+    width: 35.77%;
     float: left;
-    margin-left: 50px;
+    margin-left: 3.13em;
 }
 article h1{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 60px;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-top: 1em;
+    letter-spacing: 0.06em;
 }
 article p{
-    font-size: 20px;
-    margin: 25px 0;
+    font-size: 1.13em;
+    margin: 1.56em 0;
 }
 article button{
-    width: 200px;
-    height: 57px;
+    width: 12.50em;
+    height: 3.75em;
     background-color: #fff;
     color: hsl(257, 40%, 49%);
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    font-size: 20px;
-    letter-spacing: 1px;
+    border-radius: 1.56em;
+    font-size: 1.25em;
+    letter-spacing: 0.06em;
     border: none;
-    box-shadow: hsl(255, 27.8%, 42.4%) 3px 3px 3px 3.5px;}
+    box-shadow: hsl(255, 27.8%, 42.4%) 3px 3px 3px 3.5px;
+    -webkit-webkit: border radius 1.56em;
+    -moz-webkit: border radius 1.56em;
+    -ms-webkit: border radius 1.56em;
+    -o-webkit: border radius 1.56em;
+    outline: none;
+}
+article button:hover{
+    background-color: hsl(291.5, 55.3%, 64.9%);
+    color: #fff;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
 /*END OF MAIN*/
 /*FOOTER*/
 footer{
     width: 100%;
     clear: both;
-    padding-top: 25px;
+    padding-top: 1.56em;
 }
-/*SOCIALS*/
+    /*SOCIALS*/
 .socials{
-    width: 300px;
+    width: 18.75em;
     float: right;
+    margin: 0;
+    padding: 0;
 }
 li{
     list-style: none;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border: 1px solid #fff;
-    margin: 0 7px;
+    border: 0.06em solid #fff;
+    margin: 0 0.44em;
     position: relative;
+}
+li:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
 }
 li a{
     position: absolute;
-    top: 10px;
-    left: 10px;
-}
-li a.fb{
-    left: 14px;
+    top: -0.35em;
+    left: -0.3em;
+    padding: 1em;
 }
 li i{
     color: #fff;
-    font-size: 20px;
+    font-size: 1.25em;
 }
-/*END OF SOCIALS*/
-/*AUTHORS*/
+    /*END OF SOCIALS*/
+    /*AUTHORS*/
 footer p{
     clear: both;
 }
 .attribution { 
-    font-size: 11px; 
+    font-size: 0.69em; 
     text-align: center; 
 }
 .attribution a {
@@ -113,4 +154,88 @@ footer p{
     -moz-border-radius: 25%;
     -ms-border-radius: 25%;
     -o-border-radius: 25%;
+}
+.attribution a:hover{
+    display: inline-block;
+    transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    -ms-transform: scaleY(1.5);
+    -o-transform: scaleY(1.5);
+}
+/*End of FOOTER*/
+
+/*MOBILE STYLES*/
+@media screen and (max-width: 375px){
+    html, body{
+        width: 100%; /*375PX*/
+        background-image: url(images/bg-mobile.svg);
+    }
+    /*HEADER*/
+    img.logo{
+        width: 37%;
+        margin: 2.5em 1em;
+    }
+    /*MAIN*/
+    .main{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main .container{
+        padding: 0;
+    }
+    section{
+        width: 80%;
+        float: none;
+        margin: 1.88em auto;
+    }
+    article{
+        width: 80%;
+        float: none;
+        margin: auto;
+    }
+    article h1{
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-top: 0;
+        padding-top: 1.88em;
+        letter-spacing: 0;
+        text-align: center;
+    }
+    article p{
+        font-size: 1em;
+        text-align: center;
+        margin: 1.88em 0;
+    }
+    article button{
+        width: 12.50em;
+        height: 2.50em;
+        font-size: 1em;
+        letter-spacing: 0;
+        margin: 0 auto;
+        display: block;
+    }
+    /*FOOTER*/
+    footer{
+        padding-top: 0;
+    }
+    /*SOCIALS*/
+    .socials{
+        width: 38%;
+        margin: 3.75em auto 2.50em;
+        float: none;
+    }
+    li{
+        width: 1.88em;
+        height: 1.88em;
+        margin: 0 0.14em;
+    }
+    li a{
+        top: -0.8em;
+        left: -0.5em;
+        }
+    li i{
+        font-size: 1em;
+    }
+    
 }
