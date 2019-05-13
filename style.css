@@ -120,13 +120,6 @@ li{
     margin: 0 0.44em;
     position: relative;
 }
-li:hover{
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
-}
 li a{
     position: absolute;
     top: -0.35em;
@@ -137,6 +130,28 @@ li i{
     color: #fff;
     font-size: 1.25em;
 }
+.social-link:hover{
+    animation: itemAnimation 2s;
+}
+@keyframes itemAnimation{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.social-item:hover{
+    background-color: hsl(291.5, 55.3%, 64.9%);
+    color: #fff;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    animation: aBigOne 2s;
+}
+@keyframes aBigOne{
+    0%{transform: scale(1);}
+    100%{transform: scale(2);}
+}
+
     /*END OF SOCIALS*/
     /*AUTHORS*/
 footer p{
