@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
 }
+/* @media (max-width: 90em) { */
 html, body{
     width: 1440px;
     height: 800px;
@@ -12,53 +13,42 @@ html, body{
     font-weight: 400;
 }
 .container{
-    display: grid;
-    grid-template-areas:
-    "header header"
-    "section article"
-    "footer footer";
-    grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 200px 3fr 105px;
     margin: 0 auto; 
     width: 90%;
+    display: flex;
+    flex-direction: column;
 }
-/*HEADER*/
 header{
-    grid-area: header;
-} 
-img.logo{
-    margin: 3.75em 5em 3.75em 0;
+    display: flex;
+    align-items: center;
+    height: 11.583em;
 }
-/*END OF HEADER*/
-/*SECTION*/
+main{
+    display: flex;
+}
 section{
-    float: left; 
     max-width: 706px;
-    grid-area: section;
 } 
 img.illustration {
-    width: 100%;
     max-width: 100%;
     }
-/*END OF SECTION*/
-/*ARTICLE*/
 article{
-    float: right;
-    width: 523px; 
-    max-width: 539px; /*!!!*/
-    grid-area: article;
-    margin-left: 3.13em;
+    max-width: 523px;
+    margin-left: auto; /*A margin set to auto will absorb all available space in its dimension*/
+    display: flex;
+    flex-direction: column;
 } 
 article h1{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2.5em;
-    margin-top: 1em;
     letter-spacing: 0.06em;
+    margin-top: 2.8rem;
 }
 article p{
     font-size: 1.13em;
     margin: 1.56em 0;
+    line-height: 2rem;
 }
 article button{
     width: 12.50em;
@@ -75,6 +65,7 @@ article button{
     -ms-webkit: border radius 1.56em;
     -o-webkit: border radius 1.56em;
     outline: none;
+    display: block;
 }
 article button:hover{
     background-color: hsl(291.5, 55.3%, 64.9%);
@@ -85,25 +76,22 @@ article button:hover{
     -ms-transition: 2s;
     -o-transition: 2s;
 }
-/*END OF ARTICLE*/
-/*FOOTER*/
  footer{
-     clear: both;
-    grid-area: footer;
+    display: flex;
+    flex-direction: column;
     padding-top: 1.56em;
-    display: grid;
+    align-items: center;
 } 
-/*SOCIALS*/
 .socials{
-    float: right;
-    width: 18.75em;
+   /* width: 18.75em; */
     margin: 0;
     padding: 0;
-    justify-self: end;
+    display: inline-flex;
+    align-self: flex-end;
 }
 li{
     list-style: none;
-    display: inline-block;
+    display: block;
     width: 2.5em;
     height: 2.5em;
     border-radius: 50%;
@@ -118,7 +106,7 @@ li{
 .social-item .social-link {
     position: absolute;
     top: -0.35em;
-    left: -0.3em;
+    left: -0.35em;
     padding: 1em;
 }
 .social-item .fab{
@@ -146,14 +134,11 @@ li{
     0%{transform: scale(1);}
     100%{transform: scale(2);}
 }
-    /*END OF SOCIALS*/
-    /*AUTHORS*/
 footer p{
     clear: both;
 }
 .attribution { 
     font-size: 0.69em; 
-    text-align: center; 
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
@@ -172,45 +157,55 @@ footer p{
     -ms-transform: scaleY(1.5);
     -o-transform: scaleY(1.5);
 }
-/*END OF AUTHORS*/
-/*END OF FOOTER*/
 
-/*MOBILE STYLES*/
-@media screen and (max-width: 800px){
+
+
+@media (max-width: 62.063em) { /*992PX*/
+    html, body{
+        width: 100vw;
+        background-image: url(images/bg-desktop.svg);
+    }
+    section {
+        max-width: 40%
+    }
+    article {
+        max-width: 55%;
+        margin-left: 3%;
+    }
+    article h1 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 48.063em){ /*768PX*/
     html, body{
         width: 100%;
         background-image: url(images/bg-mobile.svg);
     }
     .container{
-        grid-template-areas:  
-        "header"
-        "section"
-        "article"
-        "footer";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    
+        align-items: center;
     }
-    /*HEADER*/
+    header{
+        width: 90%;
+        height: 8em;
+    }
     img.logo{
         width: 37%;
-        margin: 2.5em 1em;
+        margin-top: -1em;
     }
-    /*MAIN*/
-    .main{
-        width: 100%;
-        margin: 0 auto;
-    }
-    .main .container{
-        padding: 0;
+    main{
+        flex-direction: column;
+        align-items: center;
     }
     section{
-        width: 80%;
-        margin: 1.88em auto;
+        max-width: 100%;
     }
-    article{
-        width: 80%;
-        margin: auto;
+    article {
+        max-width: 100%;
+        margin-left: 0;
     }
     article h1{
         font-weight: 700;
@@ -223,7 +218,8 @@ footer p{
     article p{
         font-size: 1em;
         text-align: center;
-        margin: 1.88em 0;
+        line-height: 1.5em;
+        margin: 1em 0;
     }
     article button{
         width: 12.50em;
@@ -232,20 +228,18 @@ footer p{
         letter-spacing: 0;
         margin: 0 auto;
         display: block;
+        margin: 0 auto;
     }
-    /*FOOTER*/
     footer{
         padding-top: 0;
     }
-    /*SOCIALS*/
     .socials{
-        width: 38%;
-        margin: 3.75em auto 2.50em;
+        margin: 3.75em 0 2.50em 0;
+        align-self: center;
     }
     .social-item{
         width: 1.88em;
         height: 1.88em;
-        margin: 0 0.14em;
     }
     .social-item .social-link{
         top: -0.8em;
@@ -254,5 +248,6 @@ footer p{
     .social-item .fab{
         font-size: 1em;
     }
-    
 }
+
+
