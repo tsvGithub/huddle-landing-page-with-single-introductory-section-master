@@ -1,15 +1,29 @@
+/* CSS DIRECTORY:
+	HEADER
+	MAIN
+	SECTION
+	ARTICLE
+    FOOTER
+    SOCIALS
+    AUTHORS
+    MOBILE STYLES
+*/
+
 *{
     box-sizing: border-box;
     margin: 0;
 }
+/* @media (max-width: 90em) */
 html, body{
     width: 1440px;
+    max-width: 100%;
     height: 800px;
     background-color:hsl(257, 40%, 49%);
     background-image: url(images/bg-desktop.svg);
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    font-size: 1.5vw;
 }
 /*HEADER*/
 header{
@@ -38,11 +52,7 @@ img.logo{
     padding: 0 1em;
     margin: 0 auto;
 }
-.main .container::after{
-    content: "";
-    display: table;
-    clear: both;
-}
+/*SECTION*/
 section{
     width: 50%;
     float: left;
@@ -51,20 +61,23 @@ img.illustration {
     width: 100%;
     max-width: 100%;
     }
+/*END OF SECTION*/
+/*ARTICLE*/
 article{
-    width: 35.77%;
+    width: 45%;
     float: left;
     margin-left: 3.13em;
 }
 article h1{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 2.5em;
+    /* font-size: 2.5em; */
+    font-size: 3vw;
     margin-top: 1em;
     letter-spacing: 0.06em;
 }
 article p{
-    font-size: 1.13em;
+    /* font-size: 1.13em; */
     margin: 1.56em 0;
 }
 article button{
@@ -73,7 +86,8 @@ article button{
     background-color: #fff;
     color: hsl(257, 40%, 49%);
     border-radius: 1.56em;
-    font-size: 1.25em;
+    /* font-size: 1.25em; */
+    font-size: 1.8vw;
     letter-spacing: 0.06em;
     border: none;
     box-shadow: hsl(255, 27.8%, 42.4%) 3px 3px 3px 3.5px;
@@ -92,7 +106,9 @@ article button:hover{
     -ms-transition: 2s;
     -o-transition: 2s;
 }
+/*END OF ARTICLE*/
 /*END OF MAIN*/
+
 /*FOOTER*/
 footer{
     width: 100%;
@@ -151,14 +167,14 @@ li i{
     0%{transform: scale(1);}
     100%{transform: scale(2);}
 }
-
-    /*END OF SOCIALS*/
-    /*AUTHORS*/
+/*END OF SOCIALS*/
+/*AUTHORS*/
 footer p{
     clear: both;
 }
 .attribution { 
-    font-size: 0.69em; 
+    /* font-size: 0.69em;  */
+    font-size: 1.2vw; 
     text-align: center; 
 }
 .attribution a {
@@ -178,12 +194,42 @@ footer p{
     -ms-transform: scaleY(1.5);
     -o-transform: scaleY(1.5);
 }
-/*End of FOOTER*/
+/*END OF AUTHORS*/
+/*END OF FOOTER*/
 
 /*MOBILE STYLES*/
-@media screen and (max-width: 375px){
+@media (max-width: 84.375em) { /*1350PX*/
     html, body{
-        width: 100%; /*375PX*/
+        width: 100vw;
+        background-image: url(images/bg-desktop.svg);
+    }
+    /*HEADER*/
+    img.logo{
+        width: 25%;
+        margin: 2.5em 10em;
+    }
+    /*MAIN*/
+    section {
+        max-width: 40%
+    }
+    article {
+        max-width: 55%;
+        margin-left: 3%;
+    }
+    article h1 {
+        margin-top: 0;
+        /* font-size: 16px; */
+        font-size: 2.5vw;
+    }
+    article p {
+        font-size: 2vw;
+    }
+}
+
+
+@media screen and (max-width: 48.063em){ /*768PX*/
+    html, body{
+        width: 100%;
         background-image: url(images/bg-mobile.svg);
     }
     /*HEADER*/
@@ -211,21 +257,24 @@ footer p{
     }
     article h1{
         font-weight: 700;
-        font-size: 1.5em;
+        /* font-size: 1.5em; */
+        font-size: 3.5vw;
         margin-top: 0;
         padding-top: 1.88em;
         letter-spacing: 0;
         text-align: center;
     }
     article p{
-        font-size: 1em;
+        /* font-size: 1em; */
+        font-size: 2.8vw;
         text-align: center;
         margin: 1.88em 0;
     }
     article button{
         width: 12.50em;
         height: 2.50em;
-        font-size: 1em;
+        /* font-size: 1em; */
+        font-size: 2.8vw;
         letter-spacing: 0;
         margin: 0 auto;
         display: block;
@@ -236,21 +285,22 @@ footer p{
     }
     /*SOCIALS*/
     .socials{
-        width: 38%;
         margin: 3.75em auto 2.50em;
         float: none;
+        text-align: center;
     }
     li{
-        width: 1.88em;
-        height: 1.88em;
+        width: 4em;
+        height: 4em;
         margin: 0 0.14em;
     }
     li a{
-        top: -0.8em;
-        left: -0.5em;
+        top: 0.1em;
+        left: 0.3em;
         }
     li i{
-        font-size: 1em;
+        /* font-size: 1em; */
+        font-size: 2.5vw;
     }
-    
 }
+/*END OF MOBILE STYLES*/
